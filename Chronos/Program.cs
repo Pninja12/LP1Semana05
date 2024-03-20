@@ -17,8 +17,9 @@ namespace Chronos
             crono1.Stop();
             crono2.Stop();
             float tempo1 = crono1.ElapsedMilliseconds;
-            Console.Write($"Cronómetro 1: {tempo1}s\n");
-            Console.Write($"Cronómetro 2: {crono2.ElapsedMilliseconds}s");
+            float tempo2 = crono2.ElapsedMilliseconds;
+            Console.Write($"Cronómetro 1: {tempo1/1000:f3}s\n");
+            Console.Write($"Cronómetro 2: {tempo2/1000:f3}s");
 
 
         }
