@@ -5,17 +5,37 @@
         private string name;
         private float health;
         private float shield;
-        // C o n s t r u t o r
-        public Enemy ( string name )
+        public Enemy (string name)
         {
-            this.name = name ; // Po rque r a z a o usamos " t h i s " ?
+            this.name = name ;
             health = 100;
             shield = 0;
         }
 
-        public string GetName ( )
+        public string GetName()
         {
             return name ;
+        }
+
+        public void SetName(string nome)
+        {
+            string Filtername = "";
+            for(int i = 0; i<8; i++)
+            {
+                Filtername += nome[i];
+            }
+            name = Filtername;
+
+        }
+
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        public float GetShield()
+        {
+            return shield;
         }
 
         public void TakeDamage (float damage)
