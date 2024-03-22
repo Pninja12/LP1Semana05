@@ -7,12 +7,14 @@ namespace MyGame
         private string name;
         private float health;
         private float shield;
+        static int HowManyPowerUps;
         
         public Enemy ()
         {
             name = "";
             health = 100;
             shield = 0;
+            HowManyPowerUps = 0;
         }
 
         public string GetName()
@@ -46,6 +48,11 @@ namespace MyGame
             return shield;
         }
 
+        public static int GetHowManyPowerUps()
+        {
+            return HowManyPowerUps;
+        }
+
         public void TakeDamage (float damage)
         {
             shield -= damage ;
@@ -73,6 +80,7 @@ namespace MyGame
                 if (shield > 100)
                     shield = 100;
             }
+            HowManyPowerUps += 1;
         }
 
     }

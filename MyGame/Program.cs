@@ -22,13 +22,20 @@ namespace MyGame
                 ListaInimigos[i] = new Enemy();
                 ListaInimigos[i].SetName(Console.ReadLine());
             }
-            
+
+            ListaInimigos[0].PickupPowerUp(PowerUp.Health, 10);
+            ListaInimigos[0].PickupPowerUp(PowerUp.Shield, 30);
+            ListaInimigos[1].PickupPowerUp(PowerUp.Shield, 30);
+            ListaInimigos[0].TakeDamage(40);
+            ListaInimigos[1].TakeDamage(10);
+            ListaInimigos[0].PickupPowerUp(PowerUp.Health, 5);
             //Loop para mostrar os inimigos
             foreach(Enemy Inimigo in ListaInimigos)
             {
                 Console.Write($"{Inimigo.GetName()} ");
                 Console.Write($"{Inimigo.GetHealth()} ");
                 Console.WriteLine($"{Inimigo.GetShield()}");
+                Console.WriteLine(Enemy.GetHowManyPowerUps());
             }
         }
     }
