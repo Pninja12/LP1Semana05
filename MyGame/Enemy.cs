@@ -1,4 +1,6 @@
-﻿namespace MyGame
+﻿using System;
+
+namespace MyGame
 {
     public class Enemy
     {
@@ -20,10 +22,15 @@
         public void SetName(string nome)
         {
             string Filtername = "";
-            for(int i = 0; i<8; i++)
+            if (nome.Length > 8)
             {
-                Filtername += nome[i];
+                for (int i = 0; i < 8; i++)
+                {
+                    Filtername += nome[i];
+                }
             }
+            else
+                Filtername = nome;
             name = Filtername;
 
         }
