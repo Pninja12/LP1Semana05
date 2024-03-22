@@ -1,6 +1,6 @@
 namespace MyGame
 {
-    enum WoWClass
+    public enum PowerUp
     {
         Shield,
         Health

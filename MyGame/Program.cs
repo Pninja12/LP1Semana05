@@ -22,7 +22,7 @@ namespace MyGame
                 ListaInimigos[i] = new Enemy();
                 ListaInimigos[i].SetName(Console.ReadLine());
             }
-
+            
             //Loop para mostrar os inimigos
             foreach(Enemy Inimigo in ListaInimigos)
             {
