@@ -7,9 +7,10 @@ namespace MyGame
         private string name;
         private float health;
         private float shield;
-        public Enemy (string name)
+        
+        public Enemy ()
         {
-            this.name = name ;
+            name = "";
             health = 100;
             shield = 0;
         }
